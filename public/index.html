@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Counter</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background: #11999e;
+			color: #40514e;
+		}
+
+		h1 {
+			text-transform: uppercase;
+			font-family: "Arial Black", Gadget, sans-serif;
+			font-size: 30px;
+
+			width: 100%;
+
+			text-align: center;
+			margin-top: 30px;
+		}
+
+		.elements {
+			background: #e4f9f5;
+
+			height: 150px;
+			width: 400px;
+
+			border: 3px solid #30e3ca;
+			border-radius: 10px;
+
+			margin: 30px auto;
+			padding: 50px 100px;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.elements .icon {
+			width: 30px;
+			height: 30px;
+			padding: 10px;
+			border-radius: 50%;
+
+			background: #40514e;
+			color: #e4f9f5;
+
+			font-size: 30px;
+			text-align: center;
+			margin: 25px;
+
+			cursor: pointer;
+		}
+
+		.elements p {
+			width: 200px;
+			text-align: center;
+			font-size: 40px
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Counter</h1>
+	<div class="elements">
+		<span class="icon" id="decrement">-</span>
+		<p id="result">0</p>
+		<span class="icon" id="increment">+</span>
+	</div>
+
+	<script>
+		const resultContainer = document.getElementById('result')
+		const increment = document.getElementById('increment')
+		const decrement = document.getElementById('decrement')
+
+		let count = 0;
+
+		increment.addEventListener('click', () => {
+			count = count + 1
+			resultContainer.textContent = count
+		})
+
+		decrement.addEventListener('click', () => {
+			count = count - 1
+			resultContainer.textContent = count
+		})
+	</script>
+</body>
+
+</html>
